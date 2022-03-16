@@ -108,6 +108,7 @@ public class OrderDetailsFragment extends BaseFragment<FragmentOrderDetailsBindi
             if (model.getPayment_type() == null || model.getPayment_type().equals("")) {
                 payMethod.add("Pay on shop");
                 payMethod.add("Upi");
+                payMethod.add("Online");
             } else {
                 payMethod.add(model.getPayment_type());
             }
@@ -130,7 +131,9 @@ public class OrderDetailsFragment extends BaseFragment<FragmentOrderDetailsBindi
                     return;
                 }
                 pType=spin.getSelectedItem().toString();
-
+                if (pType.equalsIgnoreCase("pay on shop")){
+                    pType="Offline";
+                }
                 if (model.getPayment_type() == null || model.getPayment_type().equals("")) {
                     /*fetch current status*/
                     checkPaymentStatus(String.valueOf(model.getId()), des, pType);
@@ -434,6 +437,9 @@ public class OrderDetailsFragment extends BaseFragment<FragmentOrderDetailsBindi
                     if (acceptOrderDialog != null && acceptOrderDialog.isShowing()) {
                         acceptOrderDialog.dismiss();
                     }
+                    if (model!=null){
+                        model.setStatus(2);
+                    }
                     binding.txtStatus.setText("Accept");
                     binding.txtH1.setText("Accepted Order");
                     binding.chatBottom.setVisibility(View.VISIBLE);
@@ -483,6 +489,9 @@ public class OrderDetailsFragment extends BaseFragment<FragmentOrderDetailsBindi
                 String message = jsonObject.get("message").getAsString();
                 if (completeOrderDialog != null && completeOrderDialog.isShowing()) {
                     completeOrderDialog.dismiss();
+                }
+                if (model!=null){
+                    model.setStatus(5);
                 }
                 binding.txtStatus.setText("Complete");
                 binding.txtH1.setText("Completed Order");
