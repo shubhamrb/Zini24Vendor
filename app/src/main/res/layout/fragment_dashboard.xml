@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="dashboardFragmentView"
+            type="com.mamits.zini24vendor.viewmodel.fragment.DashboardFragmentViewModel" />
+    </data>
+
+    <FrameLayout
+        android:id="@+id/fragmentDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragment.DashboardFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                android:id="@+id/txt_wish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:lineSpacingExtra="6.5sp"
+                android:text="Good Morning\nMr. Manish Kumar"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20ssp"
+                app:fontName="Raleway-Medium.ttf" />
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_wish"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@null"
+                android:elevation="0dp"
+                android:visibility="visible">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabs"
+                    style="@style/AppTabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:tabGravity="fill"
+                    app:tabMode="scrollable"
+                    app:tabTextAppearance="@style/AppTabTextAppearance" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/app_bar" />
+        </RelativeLayout>
+
+    </FrameLayout>
+</layout>

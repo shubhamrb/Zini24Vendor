@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="HomeView"
+            type="com.mamits.zini24vendor.viewmodel.fragment.HomeViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.fragment.dashboard.HomeFragment">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                    android:id="@+id/txt_h1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:text="@string/overview"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15ssp"
+                    app:fontName="Raleway-Medium.ttf" />
+
+                <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                    android:id="@+id/txt_h2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_h1"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:alpha="0.7"
+                    android:lineSpacingExtra="0.5sp"
+                    android:text="The following data shown below is of till this date. This will be updated as per order request and your actions."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp"
+                    app:fontName="Raleway-Regular.ttf" />
+
+                <LinearLayout
+                    android:id="@+id/ll_boxes_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_h2"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:id="@+id/tap_t_order"
+                        android:layout_width="0dp"
+                        android:layout_height="112dp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/total_order_box_layout"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp">
+
+                        <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                            android:id="@+id/to_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="Total Orders"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_9ssp"
+                            app:fontName="Raleway-Medium.ttf" />
+
+                        <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                            android:id="@+id/txt_total_order"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/to_label"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="00"
+                            android:textColor="@color/color_orange"
+                            android:textSize="@dimen/_13ssp"
+                            app:fontName="Montserrat-Bold.ttf" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/tap_a_order"
+                        android:layout_width="0dp"
+                        android:layout_height="112dp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/completed_order_box_layout"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp">
+
+                        <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                            android:id="@+id/oa_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:singleLine="true"
+                            android:text="Order Accepted"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_9ssp"
+                            app:fontName="Raleway-Medium.ttf" />
+
+                        <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                            android:id="@+id/txt_order_accept"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/oa_label"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="00"
+                            android:textColor="@color/green_39ae00"
+                            android:textSize="@dimen/_13ssp"
+                            app:fontName="Montserrat-Bold.ttf" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/tap_r_order"
+                        android:layout_width="0dp"
+                        android:layout_height="112dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/denied_order_box_layout"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp">
+
+                        <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                            android:id="@+id/or_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="Order Rejected"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_9ssp"
+                            app:fontName="Raleway-Medium.ttf" />
+
+                        <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                            android:id="@+id/txt_order_reject"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/or_label"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="00"
+                            android:textColor="@color/red_ff2502"
+                            android:textSize="@dimen/_13ssp"
+                            app:fontName="Montserrat-Bold.ttf" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_boxes_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_boxes_1"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:id="@+id/tap_p_order"
+                        android:layout_width="0dp"
+                        android:layout_height="112dp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/pending_order_box_layout"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp">
+
+                        <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                            android:id="@+id/po_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="Pending Orders"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_9ssp"
+                            app:fontName="Raleway-Medium.ttf" />
+
+                        <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                            android:id="@+id/txt_pending_order"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/po_label"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="00"
+                            android:textColor="@color/yellow_ffb302"
+                            android:textSize="@dimen/_13ssp"
+                            app:fontName="Montserrat-Bold.ttf" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/tap_c_order"
+                        android:layout_width="0dp"
+                        android:layout_height="112dp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/payment_recieved_box_layout"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp">
+
+                        <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                            android:id="@+id/oc_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:singleLine="true"
+                            android:text="Order Completed"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_9ssp"
+                            app:fontName="Raleway-Medium.ttf" />
+
+                        <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                            android:id="@+id/txt_order_complete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/oc_label"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="00"
+                            android:textColor="@color/purple_8000ff"
+                            android:textSize="@dimen/_13ssp"
+                            app:fontName="Montserrat-Bold.ttf" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_pay"
+                        android:layout_width="0dp"
+                        android:layout_height="112dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/total_amount_box_layout"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp">
+
+                        <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                            android:id="@+id/pn_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:singleLine="true"
+                            android:text="Pay Now"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_9ssp"
+                            app:fontName="Raleway-Medium.ttf" />
+
+                        <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                            android:id="@+id/txt_pay_now"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/pn_label"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="₹ 00"
+                            android:textColor="@color/blue_006fff"
+                            android:textSize="@dimen/_13ssp"
+                            app:fontName="Montserrat-Bold.ttf" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </FrameLayout>
+</layout>

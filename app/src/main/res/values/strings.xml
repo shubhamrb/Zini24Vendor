@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name" translatable="false">Zini24Vendor</string>
+    <string name="default_notification_channel_id">my_channel_01</string>
+    <string name="server_not_available" translatable="false">Server error</string>
+    <string name="login" translatable="false">Login</string>
+    <string name="register" translatable="false">Register</string>
+    <string name="mponline_kiosk" translatable="false">MPonline Kiosk</string>
+    <string name="login_nas_vendor" translatable="false">Login\nas Vendor.</string>
+    <string name="register_nas_vendor" translatable="false">Register\nas Vendor.</string>
+    <string name="forgot_nyour_pin" translatable="false">Forgot\nYour Password ?</string>
+    <string name="your_nnew_pin" translatable="false">Your\nNew Password</string>
+    <string name="mobile_no" translatable="false">Mobile No.</string>
+    <string name="_91" translatable="false">+91</string>
+    <string name="enter_your_password" translatable="false">Enter Your Password</string>
+    <string name="hint_pin" translatable="false">888888</string>
+    <string name="forgot_pin_click_here" translatable="false">Forgot Password? Click here!</string>
+    <string name="verify_otp">Verify OTP</string>
+    <string name="enter_your_otp">Enter Your OTP</string>
+    <string name="resend_otp_in_02_36">Resend OTP in 02 : 36</string>
+    <string name="edit">Edit</string>
+    <string name="enter_otp_sent_on_91_982_897_xxxx">Enter OTP Sent on </string>
+    <string name="enter_new_pin">Enter New Password</string>
+    <string name="re_enter_new_pin">Re-Enter New Password</string>
+    <string name="change_pin">Change Password</string>
+    <string name="log_out">Log Out</string>
+    <string name="check_internet_connection">Check your internet connection</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="overview">Overview</string>
+    <string name="mobile_no_or_email">Mobile No. or Email</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="submit">Submit</string>
+    <string name="order_amount">Order Amount</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="api_key">AIzaSyBqqRDGvGCxSP4cSi4kZseS6oeL-uU7SRg</string>
+</resources>

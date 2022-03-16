@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <com.mamits.zini24vendor.ui.customviews.CustomTextView
+        android:id="@+id/h2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:lineSpacingExtra="@dimen/_5sdp"
+        android:text="Filter Services"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_25ssp"
+        app:fontName="Raleway-Medium.ttf" />
+
+    <com.mamits.zini24vendor.ui.customviews.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:lineSpacingExtra="@dimen/_5sdp"
+        android:text="Category"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13ssp"
+        app:fontName="Raleway-Regular.ttf" />
+
+    <RelativeLayout
+        android:id="@+id/ll_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@color/edit_text_back"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_category"
+            style="@style/Base.Widget.AppCompat.Spinner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/black"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+    </RelativeLayout>
+
+    <com.mamits.zini24vendor.ui.customviews.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:lineSpacingExtra="@dimen/_5sdp"
+        android:text="Sub Category"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13ssp"
+        app:fontName="Raleway-Regular.ttf" />
+
+    <RelativeLayout
+        android:id="@+id/ll_pass"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@color/edit_text_back"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_subcategory"
+            style="@style/Base.Widget.AppCompat.Spinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/black"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@color/color_orange">
+
+        <com.mamits.zini24vendor.ui.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15ssp"
+            app:fontName="Raleway-Medium.ttf" />
+    </RelativeLayout>
+</LinearLayout>

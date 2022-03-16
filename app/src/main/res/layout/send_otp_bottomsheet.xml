@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <com.mamits.zini24vendor.ui.customviews.CustomTextView
+        android:id="@+id/h2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:lineSpacingExtra="@dimen/_5sdp"
+        android:text="@string/forgot_nyour_pin"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_25ssp"
+        app:fontName="Raleway-Medium.ttf" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_10sdp">
+
+        <com.mamits.zini24vendor.ui.customviews.CustomTextView
+            android:id="@+id/label_otp_sent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.7"
+            android:text="Enter you registered mobile no."
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            app:fontName="Raleway-Regular.ttf" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@color/edit_text_back"
+        android:orientation="vertical">
+
+        <com.mamits.zini24vendor.ui.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:text="@string/mobile_no"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_8ssp"
+            app:fontName="Raleway-Light.ttf" />
+
+        <com.mamits.zini24vendor.ui.customviews.CustomInputEditText
+            android:id="@+id/et_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.7"
+            android:background="@null"
+            android:hint="@string/_91"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:padding="@dimen/_5sdp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_hint"
+            android:textSize="@dimen/_17ssp"
+            app:fontName="Raleway-Light.ttf" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_send_otp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@color/color_orange">
+
+        <com.mamits.zini24vendor.ui.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/send_otp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15ssp"
+            app:fontName="Raleway-Medium.ttf" />
+    </RelativeLayout>
+</LinearLayout>

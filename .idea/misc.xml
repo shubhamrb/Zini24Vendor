@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/drawable/add_photo.xml" value="0.240625" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/drawable/rectangle_border.xml" value="0.240625" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/drawable/rectangle_box.xml" value="0.240625" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/accept_order_bottomsheet.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/activity_dashboard.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/activity_main.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/activity_payment.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/activity_profile.xml" value="0.23984418475236505" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/activity_register.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/category_list_item.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/change_pin_bottomsheet.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/complete_order_bottomsheet.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/coupons_list_item.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/filepicker_gallery.xml" value="0.22447916666666667" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/forgot_otp_bottomsheet.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/form_item.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/fragment_add_service.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/fragment_category.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/fragment_change_password.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/fragment_coupon.xml" value="0.151268115942029" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/fragment_create_coupon.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/fragment_dashboard.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/fragment_help_support.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/fragment_home.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/fragment_inbox.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/fragment_message.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/fragment_order_details.xml" value="0.151268115942029" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/fragment_orders.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/fragment_payment.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/fragment_profile.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/fragment_services.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/fragment_transactions.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/inbox_list_item.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/login_otp_bottomsheet.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/message_from_item.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/message_to_item.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/nav_drawer_layout.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/orders_filter.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/orders_list_item.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/payment_bottomsheet.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/payments_filter.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/progress_dialog.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/send_otp_bottomsheet.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/service_filter_bottomsheet.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/services_list_item.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/layout/spinner_layout.xml" value="0.18795289855072464" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.240625" />
+        <entry key="..\:/AndroidStudioProjects/MaMITs/Zini24Vendor/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.12604166666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

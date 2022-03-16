@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="orderDetailView"
+            type="com.mamits.zini24vendor.viewmodel.fragment.OrderDetailViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.fragment.orders.OrderDetailsFragment">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:elevation="@dimen/_10sdp">
+
+            <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:text="My Orders"
+                android:textColor="@color/color_orange"
+                android:textSize="@dimen/_15ssp"
+                app:fontName="Raleway-SemiBold.ttf" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottom"
+            android:layout_below="@+id/card_main">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                    android:id="@+id/txt_h1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15ssp"
+                    app:fontName="Raleway-Medium.ttf" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/item_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_h1"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:backgroundTint="@color/white">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/rl_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:backgroundTint="@color/tab_select">
+
+                            <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                                android:id="@+id/txt_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:layout_marginBottom="@dimen/_3sdp"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_8ssp"
+                                app:fontName="Montserrat-SemiBold.ttf" />
+                        </androidx.cardview.widget.CardView>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/rl_date"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp">
+
+
+                            <com.mamits.zini24vendor.ui.customviews.CustomCircularImageView
+                                android:id="@+id/img"
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:src="@drawable/rupee_circle" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:layout_toStartOf="@id/ll_status"
+                                android:layout_toEndOf="@id/img"
+                                android:orientation="vertical">
+
+                                <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                                    android:id="@+id/txt_order_id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:alpha="0.7"
+                                    android:text="#"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_8ssp"
+                                    app:fontName="Montserrat-Regular.ttf" />
+
+                                <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                                    android:id="@+id/txt_username"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:alpha="0.7"
+                                    android:singleLine="true"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_11ssp"
+                                    app:fontName="Montserrat-SemiBold.ttf" />
+
+                                <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                                    android:id="@+id/txt_service_category"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:alpha="0.7"
+                                    android:singleLine="true"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_9ssp"
+                                    app:fontName="Montserrat-Regular.ttf" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_status"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                                    android:id="@+id/txt_status"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textColor="@color/green_39ae00"
+                                    android:textSize="@dimen/_10ssp"
+                                    app:fontName="Montserrat-SemiBold.ttf" />
+
+                                <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                                    android:id="@+id/txt_price"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="₹ "
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_9ssp"
+                                    app:fontName="Montserrat-SemiBold.ttf" />
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                    android:id="@+id/label_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/item_card"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:text="Details"
+                    android:textColor="@color/color_orange"
+                    android:textSize="@dimen/_15ssp"
+                    app:fontName="Raleway-SemiBold.ttf" />
+
+                <LinearLayout
+                    android:id="@+id/ll_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/label_detail"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.7"
+                            android:text="Full Name"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp"
+                            app:fontName="Raleway-Regular.ttf" />
+
+                        <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                            android:id="@+id/txt_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:alpha="0.7"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp"
+                            app:fontName="Raleway-Regular.ttf" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@color/divider" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:visibility="gone">
+
+                        <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.7"
+                            android:text="Mobile No."
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp"
+                            app:fontName="Raleway-Regular.ttf" />
+
+                        <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                            android:id="@+id/txt_mobile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:alpha="0.7"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp"
+                            app:fontName="Raleway-Regular.ttf" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:visibility="gone"
+                        android:background="@color/divider" />
+
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp">
+
+                        <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.7"
+                            android:text="Email"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp"
+                            app:fontName="Raleway-Regular.ttf" />
+
+                        <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                            android:id="@+id/txt_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:alpha="0.7"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp"
+                            app:fontName="Raleway-Regular.ttf" />
+                    </RelativeLayout>
+
+                    <View
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@color/divider" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_form"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_detail"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/form_item" />
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="2">
+
+            <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                android:id="@+id/btn_accept"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/color_orange"
+                android:gravity="center"
+                android:text="Accept"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15ssp"
+                app:fontName="Raleway-Medium.ttf" />
+
+            <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                android:id="@+id/btn_reject"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/red_ff2502"
+                android:gravity="center"
+                android:text="Reject"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15ssp"
+                app:fontName="Raleway-Medium.ttf" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/chat_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="2">
+
+            <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                android:id="@+id/btn_chat"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/color_orange"
+                android:gravity="center"
+                android:text="Chat"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15ssp"
+                app:fontName="Raleway-Medium.ttf" />
+
+            <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                android:id="@+id/btn_complete"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/green_39ae00"
+                android:gravity="center"
+                android:text="Complete"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15ssp"
+                app:fontName="Raleway-Medium.ttf" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="dashboardView"
+            type="com.mamits.zini24vendor.viewmodel.activity.DashboardActivityViewModel" />
+    </data>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.activity.DashboardActivity">
+
+        <RelativeLayout
+            android:id="@+id/mainView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp">
+
+                <ImageView
+                    android:id="@+id/btn_toggle"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:src="@drawable/ic_menu" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_toStartOf="@id/ll_actions"
+                    android:layout_toEndOf="@id/btn_toggle"
+                    android:orientation="vertical">
+
+                    <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                        android:id="@+id/toolbar_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/app_name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15ssp"
+                        app:fontName="Raleway-Regular.ttf" />
+
+                    <com.mamits.zini24vendor.ui.customviews.CustomTextView
+                        android:id="@+id/store_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/_4sdp"
+                        android:singleLine="true"
+                        android:text="Shop is Open"
+                        android:textColor="@color/color_orange"
+                        android:textSize="@dimen/_12ssp"
+                        app:fontName="Raleway-Regular.ttf" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_actions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/store_switch"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:padding="@dimen/_5sdp"
+                        app:thumbTint="@color/color_orange"
+                        app:trackTint="@color/tab_unselect" />
+
+                    <ImageView
+                        android:id="@+id/btn_search"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/search"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/btn_notification"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_6sdp"
+                        android:src="@drawable/notification"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/home"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_3sdp"
+                        android:src="@drawable/ic_home" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <fragment
+                android:id="@+id/nav_host_fragment"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/toolbar" />
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/nav_drawer"
+            layout="@layout/nav_drawer_layout"
+            bind:dashboardView="@{dashboardView}" />
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>
